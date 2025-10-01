@@ -184,4 +184,30 @@ namespace malak
         }
     }
 }
+////////////////////////
+// reverse a number
+using System;
+using System.Dynamic;
+
+namespace malak
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("enter the number: ");
+            int n = int.Parse(Console.ReadLine());
+            int reverse  = 0;
+            
+            while (n != 0)
+            {
+                reverse = (reverse * 10) + n %10;
+                n /= 10;  
+            }
+            Console.WriteLine(reverse);
+
+        }
+    }
+}
+//////////////
 
