@@ -210,4 +210,40 @@ namespace malak
     }
 }
 //////////////
+// checking if the number is prime pr not 
+using System;
+using System.Dynamic;
+using System.Transactions;
+
+namespace malak
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter a number: ");
+            int n =int.Parse(Console.ReadLine());
+            bool isPrime = true; // flag 
+          
+
+            if (n <= 1) isPrime = false;
+            else
+            {
+                for (int i = 2; i * i <= n; i++) 
+                {
+                    if (n % i == 0) isPrime = false;
+                    else isPrime = true;
+                    break;
+                }
+            }
+
+            if (isPrime) Console.WriteLine("{0} is  prime", n);
+            else Console.WriteLine("{0} is not  prime", n);
+
+
+
+        }
+    }
+}
+
 
