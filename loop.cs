@@ -210,7 +210,7 @@ namespace malak
     }
 }
 //////////////
-// checking if the number is prime pr not 
+// checking if the number is prime 
 using System;
 using System.Dynamic;
 using System.Transactions;
@@ -240,6 +240,84 @@ namespace malak
             if (isPrime) Console.WriteLine("{0} is  prime", n);
             else Console.WriteLine("{0} is not  prime", n);
 
+
+
+        }
+    }
+}
+/////////////////////////////////////
+//all the divisors of a number 
+
+using System;
+using System.Dynamic;
+using System.Transactions;
+
+namespace malak
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("enter a number: ");
+            int n =int.Parse(Console.ReadLine());
+           for(int i = 1; i <= n; i++)
+            {
+                if(n % i ==0) Console.WriteLine(i);
+                
+            }
+            
+
+        }
+    }
+}
+/////////////////////
+//the factorial of a number 
+using System;
+using System.Dynamic;
+using System.Transactions;
+
+namespace malak
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter a number: ");
+            int n =int.Parse(Console.ReadLine());
+            int factorial = 1;
+            for (int i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            Console.WriteLine($"the factorial of {n} is {factorial}");
+          
+
+
+        }
+    }
+}
+////////////////////
+// power
+using System;
+using System.Dynamic;
+using System.Transactions;
+
+namespace malak
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the base: ");
+            int Base = int.Parse(Console.ReadLine());
+            Console.Write("Enter the Exponent: ");
+            int Exponent = int.Parse(Console.ReadLine());
+            long Result = 1;
+
+            for (int i = 0; i < Exponent; i++) {
+                Result *= Base;
+            }
+            Console.WriteLine($"{Base} ^ {Exponent} = {Result}");
+          
 
 
         }
