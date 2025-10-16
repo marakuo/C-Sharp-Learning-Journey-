@@ -51,7 +51,7 @@ namespace malak
     {
         static void Main(string[] args)
         {
-            //accessing the class
+            //creating an instance of object to access the class we also can use public static instead 
             calculator c = new calculator();
             Console.WriteLine("---- Welcome to my Calculator ----");
             Console.Write("Enter the first number: ");
