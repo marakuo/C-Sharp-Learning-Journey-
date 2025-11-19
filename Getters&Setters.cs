@@ -93,3 +93,116 @@ namespace malak
 
 }
 
+////////////////////
+
+
+using System;
+
+namespace csharpcode
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee emp = new Employee();
+            Console.Write("Enter your name:\t");
+           emp.Name = Console.ReadLine();
+            Console.Write("Enter your ID:\t");
+            emp.ID = int.Parse(Console.ReadLine());
+            Console.Write("Enter your salary:\t");
+            emp.Salary = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("=== Employee's data ===");
+            
+
+            Console.WriteLine(emp.name);
+            Console.WriteLine(emp.id);
+            Console.WriteLine(emp.salary);
+
+        }
+        // end of main
+        
+        
+    }
+    // end of class 
+    class Employee
+    {
+        public string name;
+        public int id;
+        public double salary;
+        // creating properties 
+        public string Name
+        {
+            set
+            {
+                if (value.Length < 3 || value == string.Empty)
+                {
+                   name = "New Employee";
+                }
+                else
+                {
+                    name = value;
+                }
+            }
+            get
+            {
+                return name;
+
+            }
+            
+        }
+
+        public double Salary
+        {
+            set
+            {
+                if (value < 20000 && value > 5000)
+                {
+                    salary = value;
+                }
+                else
+                {
+                    salary = 5000;
+                    
+                }
+            }
+            get
+            {
+                return salary;
+            }
+        }
+
+        public int ID
+        {
+            set
+            {
+                if (value > 0 && value < 20)
+                {
+                    id = value;
+                }
+                else
+                {
+                    id = 1;
+                }
+            }
+            get
+            {
+                return id;
+            }
+        }
+
+       
+
+        
+    }
+   
+        
+}
+    
+    
+    
+    
+
+    
+
+    
+
