@@ -200,7 +200,63 @@ namespace csharpcode
     
     
     
+    /////////////////////////////
+using System;
+
+namespace csharpcode
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee [] emp =
+            {
+                new Employee("Malk", 5, 2000),
+                new Employee("heba", 6, 3000),
+                new Employee("Michael", 7, 4000),
+                
+            };
+            for (int i = 0; i < emp.Length; i++)
+            {
+                Console.WriteLine(emp[i]);
+            }
+
+        }
+        // end of main
+        
+        
+    }
+    // end of class 
+    class Employee
+    {
+        public string name;
+        public int id;
+        public double salary;
+        // creating properties 
+        public Employee(string name, int id, double salary)
+        {
+            this.name = name;
+            this.id = id;
+            this.salary = salary;
+        }
+
+        public override string ToString()
+        {
+           return $"name : {name}, id: {id}, salary: {salary}";
+        }
+    }
+   
+        
+}
     
+    
+    
+    
+
+    
+
+    
+
 
     
 
