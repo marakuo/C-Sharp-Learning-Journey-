@@ -252,6 +252,62 @@ namespace csharpcode
     
     
     
+/////////////using foreach
+using System;
+
+namespace csharpcode
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee [] emp =
+            {
+                new Employee("Malk", 5, 2000),
+                new Employee("heba", 6, 3000),
+                new Employee("Michael", 7, 4000),
+                
+            };
+            foreach (Employee Emp in emp)
+            {
+                Console.WriteLine(Emp);
+            }
+
+        }
+        // end of main
+        
+        
+    }
+    // end of class 
+    class Employee
+    {
+        public string name;
+        public int id;
+        public double salary;
+        // creating properties 
+        public Employee(string name, int id, double salary)
+        {
+            this.name = name;
+            this.id = id;
+            this.salary = salary;
+        }
+
+        public override string ToString()
+        {
+           return $"name : {name}, id: {id}, salary: {salary}";
+        }
+    }
+   
+        
+}
+    
+    
+    
+    
+
+    
+
+    
 
     
 
