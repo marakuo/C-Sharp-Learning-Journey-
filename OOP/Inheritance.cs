@@ -101,6 +101,63 @@ class Bird : Animal
 }
 
 
+////////////////
+/// base 
+using System;
+using System.Net.NetworkInformation;
+using System.Reflection;
+using System.Runtime.InteropServices.Marshalling;
+using System.Transactions;
 
+
+namespace csharpcode
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           x ob = new x();
+           y ob2 = new y();
+           ob.name();
+           ob2.name();
+            
+           
+
+        }
+        
+    }
+    class x
+
+    {
+        public void name()
+        {
+            Console.WriteLine("hello");
+        }
+        
+
+        
+
+    }
+
+    class y : x
+
+    {
+        public void name()
+        {
+            base.name();
+            Console.WriteLine("world!");
+        }
+
+       
+    }
+
+    
+
+   
+   
+
+    
+    
+}
 
 
