@@ -16,9 +16,6 @@ namespace csharpcode
 
 
 
-
-
-
         }
         
     }
@@ -41,10 +38,48 @@ namespace csharpcode
 
  
     
+}
+////////////////////
 
-   
-   
+using System;
+using System.Net.NetworkInformation;
+using System.Reflection;
+using System.Runtime.InteropServices.Marshalling;
+using System.Transactions;
+using System.Xml;
 
+
+namespace csharpcode
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            child ch = new child();
+
+
+
+
+
+
+        }
+        
+    }
+
+    class parent
+    {
+        
+    }
+
+    class child : parent
+    {
+        public child()
+        {
+            Console.WriteLine("this is the child constructor");
+        }
+    }
+
+ 
     
     
 }
